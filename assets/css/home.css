@@ -11,5 +11,16 @@ body{
     box-shadow: 0px 0px 14px 7px grey;
     background-color: white;
     padding: 3%;
+    
+}
+/* aligning box content */
+#box .center{
     text-align: center;
+}
+/* box label */
+#box label{
+    font-weight: 600;
+}
+#list{
+    margin-top: 2%;
 }
