@@ -1,0 +1,18 @@
+{
+  "name": "todo-app-node",
+  "version": "1.0.0",
+  "description": "A simple todo web application to keep a record of tasks made using node and mongo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "todo",
+    "app"
+  ],
+  "author": "Chanakya Garg",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
