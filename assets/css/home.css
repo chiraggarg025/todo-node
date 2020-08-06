@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(160, 245, 160);
+}
+/* complete to do box */
+#box{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    width: 70vw;
+    border-radius: 25px;
+    box-shadow: 0px 0px 14px 7px grey;
+    background-color: white;
+    padding: 3%;
+    text-align: center;
+}

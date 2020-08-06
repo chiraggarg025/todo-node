@@ -2,11 +2,13 @@ const express  = require('express');
 // requiring express
 const app = express();
 const port = 8000;
+// setting location for assets
+app.use(express.static('./assets'));
 // set up the view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
-// setting location for assets
-app.use(express.static('./assets'));
+app.use(express.urlencoded());
+
 // getting the homepage
 app.get('/',function(req,res){
     res.render('home');
