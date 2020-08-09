@@ -45,7 +45,7 @@
           </form>
           <form action="/delete-tasks" method="GET" id="delete-task-form">
             <div class="form-row">
-              <input class="form-control form-group col-md-8" type="search" placeholder="Search Your Tasks" aria-label="Search">
+              <input class="form-control form-group col-md-8" id="searchbar" placeholder="Search Your Tasks" aria-label="Search">
               <button type="submit" class="btn btn-danger btn-lg form-group col-md-3"><i class="fa fa-trash" aria-hidden="true"></i> Delete Marked Tasks</button>
             </div>
             
@@ -53,7 +53,7 @@
           <div id="list">
             <ul class="list-group">
               <%for(i of tasks){%>
-              <form id="<%=i._id%>" action="/update-task/?id=<%=i._id%>&status=<%=i.checked%>" method="POST" >
+              <form id="<%=i._id%>" action="/update-task/?id=<%=i._id%>&status=<%=i.checked%>" method="POST" class="tasks-form">
                 <button  class="list-group-item <%=i.checked%>">
                   <div class="container">
                     <div class="row">
