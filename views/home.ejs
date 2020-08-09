@@ -46,7 +46,7 @@
           <div id="list">
             <ul class="list-group">
               <%for(i of tasks){%>
-              <form id="<%=i._id%>" action="/update-task/?id=<%=i._id%>" method="POST" >
+              <form id="<%=i._id%>" action="/update-task/?id=<%=i._id%>&status=<%=i.checked%>" method="POST" >
                 <button  class="list-group-item <%=i.checked%>">
                   <div class="container">
                     <div class="row">

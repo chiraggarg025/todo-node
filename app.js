@@ -40,7 +40,35 @@ app.post('/create-task',function(req,res){
             res.redirect('back');
         }
     });
-})
+});
+// Updating a task status
+// Updating the database for the request
+app.post('/update-task',function(req,res){
+    let id = req.query.id;
+    // finding the task
+    Task.findById(id,function(err,task){
+        if(err){
+            console.log("not found");
+            return;
+        }
+        const newTask=task;
+        const status = req.query.status;
+        if(status=='true'){
+            newTask.checked=false;
+        }else {
+            newTask.checked=true;
+        }
+        // updating that found task
+        Task.findByIdAndUpdate(id,newTask,function(err,newCreatedTask){
+            if(err){
+                console.log("Error in Updating");
+                return;
+            }
+            return res.redirect('back');
+        })
+        
+    });
+});
 // listening to port
 app.listen(port, function(err){
     if (err){
