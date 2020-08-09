@@ -25,19 +25,26 @@ body{
 #list{
     margin-top: 1%;
 }
+/* list items */
 #list ul button{
     cursor: pointer;
     width: 100%;
     
 }
+#list ul button span{
+    text-transform: capitalize;
+}
+/* hover for list items */
 #list ul button:hover{
     background-color: rgb(238, 73, 73);
     color: white;
 }
+/* class for toggling the status */
 .checked{
     text-decoration: line-through;
     background-color:  rgb(238, 73, 73);;
 }
+/* delete button and search bar */
 #delete-task-form input{
     margin-right: 2%;
     margin-top: 1%;
