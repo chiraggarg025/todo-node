@@ -23,7 +23,7 @@ body{
 }
 /* list */
 #list{
-    margin-top: 2%;
+    margin-top: 1%;
 }
 #list ul button{
     cursor: pointer;
@@ -37,4 +37,9 @@ body{
 .checked{
     text-decoration: line-through;
     background-color:  rgb(238, 73, 73);;
+}
+#delete-task-form input{
+    margin-right: 2%;
+    margin-top: 1%;
+    font-size: 1.1rem;
 }

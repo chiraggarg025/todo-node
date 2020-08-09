@@ -39,9 +39,16 @@
             </div>
             <hr>
             <div class="form-group center">
-              <button type="submit" class="btn btn-primary btn-lg "><i class="fa fa-plus" aria-hidden="true"></i> Add Task</button>
-              <button type="submit" class="btn btn-danger btn-lg "><i class="fa fa-trash" aria-hidden="true"></i> Delete Tasks</button>
+              <button type="submit" class="btn btn-primary btn-lg btn-block "><i class="fa fa-plus" aria-hidden="true"></i> Add Task To List</button>
+              
             </div>
+          </form>
+          <form action="/delete-tasks" method="GET" id="delete-task-form">
+            <div class="form-row">
+              <input class="form-control form-group col-md-8" type="search" placeholder="Search Your Tasks" aria-label="Search">
+              <button type="submit" class="btn btn-danger btn-lg form-group col-md-3"><i class="fa fa-trash" aria-hidden="true"></i> Delete Marked Tasks</button>
+            </div>
+            
           </form>
           <div id="list">
             <ul class="list-group">

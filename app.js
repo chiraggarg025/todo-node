@@ -2,14 +2,17 @@ const express  = require('express');
 // requiring express
 const app = express();
 const port = 8000;
+// requiring model
 const Task = require('./models/tasks');
 const path=require('path')
+// requiring db
 const db = require('./config/mongoose');
 // setting location for assets
 app.use(express.static('./assets'));
 // set up the view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
+// setting up directory path
 app.set('views',path.join(__dirname,'views'));
 app.use(express.urlencoded());
 
@@ -68,6 +71,10 @@ app.post('/update-task',function(req,res){
         })
         
     });
+});
+// delete a task
+app.get('/delete-tasks',function(req,res){
+res.redirect('back');
 });
 // listening to port
 app.listen(port, function(err){
