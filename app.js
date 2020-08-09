@@ -15,8 +15,17 @@ app.use(express.urlencoded());
 
 // getting the homepage
 app.get('/',function(req,res){
-    res.render('home');
+    Task.find({},function(err,tasks){
+        if(err){
+            console.log(`Error in finding the tasks : ${err}`);
+            return;
+        }
+        res.render('home',{tasks:tasks});
+    })
+    
 });
+
+// creating a task
 app.post('/create-task',function(req,res){
     Task.create({
         description:req.body.description,

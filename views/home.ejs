@@ -45,9 +45,25 @@
           </form>
           <div id="list">
             <ul class="list-group">
-              <li class="list-group-item">Cras justo odio</li>
-              <li class="list-group-item">Dapibus ac facilisis in</li>
-              <li class="list-group-item">Morbi leo risus</li>
+              <%for(i of tasks){%>
+              <form id="<%=i._id%>" action="/update-task/?id=<%=i._id%>" method="POST" >
+                <button  class="list-group-item">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-4">
+                        <span><%=i.description%></span> 
+                      </div>
+                      <div class="col-sm-7">
+                        <span><i class="fa fa-calendar"></i>&nbsp;<%=i.date%></span>
+                      </div>
+                      <div class="col-sm-1">
+                        <span><i class="fa fa-trash"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </button>
+              </form>
+              <%}%>
             </ul>
           </div>
     </div>

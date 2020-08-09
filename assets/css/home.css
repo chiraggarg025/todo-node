@@ -25,6 +25,12 @@ body{
 #list{
     margin-top: 2%;
 }
-#list li{
+#list ul button{
+    cursor: pointer;
+    width: 100%;
     
+}
+#list ul li:hover{
+    background-color: rgb(238, 73, 73);
+    color: white;
 }
