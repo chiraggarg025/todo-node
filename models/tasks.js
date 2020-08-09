@@ -13,7 +13,7 @@ const taskSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    check:{
+    checked:{
         type:Boolean,
         default:false
     }

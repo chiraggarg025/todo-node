@@ -30,7 +30,11 @@ body{
     width: 100%;
     
 }
-#list ul li:hover{
+#list ul button:hover{
     background-color: rgb(238, 73, 73);
     color: white;
+}
+.checked{
+    text-decoration: line-through;
+    background-color:  rgb(238, 73, 73);;
 }
