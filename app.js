@@ -39,7 +39,6 @@ app.post('/create-task',function(req,res){
             console.log(`Error in creating task : ${err}`);
             return;
         }else{
-            console.log(task);
             return res.redirect('back');
         }
     });
