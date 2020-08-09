@@ -17,7 +17,7 @@
         <form action="/create-task" method="POST">
             <div class="form-group">
               <label for="inputAddress">Description</label>
-              <input type="text" class="form-control" id="description" name="description" placeholder="What do you want to do next?">
+              <input type="text" class="form-control" id="description" name="description" placeholder="What do you want to do next?" required>
             </div>
             <hr>
             <div class="form-row">
@@ -34,13 +34,14 @@
               <hr>
               <div class="form-group col-md-6">
                 <label for="due-date">Due Date</label>
-                <input type="date" id="due-date" name="date" placeholder="" class="form-control">
+                <input type="date" id="due-date" name="date" placeholder="" class="form-control" required>
               </div>
             </div>
             <hr>
             <div class="form-group center">
-              <input type="submit" class="btn btn-primary btn-lg " value="Add Task">
-              <button type="button" class="btn btn-danger btn-lg "><i class="fa fa-trash" aria-hidden="true"></i> Delete Tasks</button>
+              <button type="submit" class="btn btn-primary btn-lg "><i class="fa fa-plus" aria-hidden="true"></i> Add Task</button>
+              <button type="submit" class="btn btn-danger btn-lg "><i class="fa fa-trash" aria-hidden="true"></i> Delete Tasks</button>
+            </div>
           </form>
           <div id="list">
             <ul class="list-group">
