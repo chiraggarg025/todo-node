@@ -23,7 +23,7 @@ app.get('/',function(req,res){
             console.log(`Error in finding the tasks : ${err}`);
             return;
         }
-        res.render('home',{tasks:tasks});
+        return res.render('home',{tasks:tasks});
     })
     
 });
@@ -40,7 +40,7 @@ app.post('/create-task',function(req,res){
             return;
         }else{
             console.log(task);
-            res.redirect('back');
+            return res.redirect('back');
         }
     });
 });
@@ -74,7 +74,14 @@ app.post('/update-task',function(req,res){
 });
 // delete a task
 app.get('/delete-tasks',function(req,res){
-res.redirect('back');
+    Task.deleteMany({checked:true},function(err){
+
+        if(err){
+            console.log('Error in deleting tasks');
+            return res.redirect('back');
+        }
+        return res.redirect('back');
+    })
 });
 // listening to port
 app.listen(port, function(err){
